@@ -27,7 +27,11 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
               task.isCompleted && "line-through"
             }`}
           >
-            {task.isCompleted ? <CheckIcon /> : <SquareIcon />}
+            {task.isCompleted ? (
+              <CheckIcon className="bg-green-600" />
+            ) : (
+              <SquareIcon />
+            )}
             {task.title}
           </button>
           <Button onClick={() => onSeeDetailsClick(task)}>
